@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revardy D. Chester | My Resume - My Project of Junior Data Analyst / Bike Sharing Project</title>
+    <link rel="stylesheet" href="../../../css/style-media.css" type="text/css">
+    <link rel="shortcut icon" href="../../../image/logo/wolf_01.png" type="image/png" sizes="16x16">
+    <script src="https://kit.fontawesome.com/abadbabf6f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../../css/prism.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <img src="../../../image/logo/lonewolf.jpg" alt="logo" class="logo">
+            <div class="title-section">
+                <h1><span>A</span>MAL <span>R</span>AHMAN <span>D</span>U<span>Y</span>A</h1>
+            </div>
+        </div>
+        <div class="header-center">
+            <div class="date-section">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </div>
+        <div class="header-right">
+            <a href="https://revchester.github.io/myportfolio-mobile/project/jda/" class="tooltip" id="close-dashboard-btn" data-title="Close" data-description="Menutup halaman ini dan kembali ke halaman My Project of Junior Data Analyst"><i class="fa-regular fa-circle-xmark"></i></a>
+        </div>
+    </header>
+    <div class="container">
+        <main>
+            <div class="main-project">
+                <div class="project-title">
+                    <h2>Bike Sharing Project</h2>
+                    <p>Mengumpulkan, Mengolah, dan memanipulasi data dalam jumlah besar untuk mendapatkan insight dari sebuah database.</p>
+                </div>
+                <img src="../../../image/maintenance/maintenance.jpg" alt="maintenance" class="project-maintenance" hidden>
+                <div class="bike-tab-container">
+                    <div class="bike-tabs">
+                        <button class="bike-tablinks" onclick="openTab(event, 'Dashboard')" id="defaultOpen">Dashboard</button>
+                        <button class="bike-tablinks" onclick="openTab(event, 'Dataset')">Dataset</button>
+                        <button class="bike-tablinks" onclick="openTab(event, 'Details')">Details</button>
+                        <button class="bike-tablinks" onclick="openTab(event, 'PythonCode')">Python Code</button>
+                    </div>
+                    <div id="Dashboard" class="bike-tabcontent">
+                        <h3 hidden>Dashboard</h3>
+                        <p hidden>Berisi visualisasi dan informasi utama proyek Bike Sharing.</p>
+                        <iframe style="margin-top: 10px; width: 98%; height:500vh;" src="https://bikesharingdataset.streamlit.app/?embed=true" frameborder="0"></iframe>
+                    </div>
+                    <div id="Dataset" class="bike-tabcontent">
+                        <h3>Dataset of this project</h3>
+                        <div class="table-content">
+                            <table class="styled-table">
+                                <thead>
+                                    <th>No.</th>
+                                    <th>Nama File</th>
+                                    <th>Action</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>01.</td>
+                                        <td>day.csv</td>
+                                        <td>
+                                            <a href="https://docs.google.com/spreadsheets/d/11V5bxawRoRDA71A9EpTs4R_W7fxVOFbtLT_3aNDcJtU/edit?usp=sharing" target="_blank" class="view-file-btn">View</a>
+                                            <a href="./dataset/day.csv" target="_blank" class="download-file-btn">Download</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02.</td>
+                                        <td>hour.csv</td>
+                                        <td>
+                                            <a href="https://docs.google.com/spreadsheets/d/194Tqhk_NZKYGS3QXpNRES_-cDCkh5rJ-jWDu4DiGuo8/edit?usp=sharing" target="_blank" class="view-file-btn">View</a>
+                                            <a href="./dataset/hour.csv" target="_blank" class="download-file-btn">Download</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset" target="_blank" class="source-file-btn">Source Dataset</a>
+                    </div>
+                    <div id="Details" class="bike-tabcontent">
+                        <h3>About this Project</h3>
+                        <h4>Bike Sharing Project</h4>
+                        <p>Untuk proyek ini, saya menggunakan Python untuk mengimpor dataset yang berekstensi .csv, melakukan cleaning/pembersihan, menganalisa dan memvisualisasikan dataset dari <span style="color: black; background-color: white; font-weight: bolder;"><a href="https://www.kaggle.com/datasets/lakshmi25npathi/bike-sharing-dataset">Kaggle</a></span> bernama Bike Sharing Dataset. Bike Sharing System adalah sebuah generasi baru dari rental sepeda tradisional, dimana seluruh proses dari keanggotaan, rental dan pengembalian kembali menjadi otomatis. Melalui sistem ini pengguna bisa dengan mudah menyewa sepeda dari posisi tertentu ke posisi lainnya.</p>
+                        <h4>Dataset</h4>
+                        <p>Pada proyek ini hanya terdapat 2 buah table yaitu day.csv dan hour csv yang berisi tentang tanggal, musim, tahun dan bulan penyewaan sepeda serta informasi lainnya.</p>
+                        <p>Kedua tabel memiliki kolom yang sama kecuali hr pada tabel hour.csv yang tidak tersedia pada tabel day.csv.</p>
+                        <p>Berikut keterangan mengenai kedua tabel:</p>
+                        <ul>
+                            <li>instant: indeks catatan</li>
+                            <li>dteday : tanggal</li>
+                            <li>season : musim (1: musim semi, 2: musim panas, 3: musim gugur, 4: musim dingin)</li>
+                            <li>yr : tahun (0: 2011, 1: 2012)</li>
+                            <li>mnth : bulan (1 sampai 12)</li>
+                            <li>hr : jam (0 hingga 23)</li>
+                            <li>holiday : hari cuaca hari libur atau tidak (diambil dari [Tautan Web])</li>
+                            <li>weekday : hari dalam seminggu</li>
+                            <li>workingday : jika hari tersebut bukan akhir pekan atau hari libur maka nilainya 1, jika tidak maka nilainya 0.</li>
+                            <li>
+                                weathersite :
+                                <ul>
+                                    <li>Cerah, Sedikit awan, Berawan sebagian, Berawan sebagian</li>
+                                    <li>Kabut + Berawan, Kabut + Awan pecah, Kabut + Sedikit awan, Kabut</li>
+                                    <li>Salju Ringan, Hujan Ringan + Badai Petir + Awan berserakan, Hujan Ringan + Awan berserakan</li>
+                                    <li>Hujan Lebat + Butiran Es + Badai Petir + Kabut, Salju + Kabut</li>
+                                </ul>
+                            </li>
+                            <li>temp: Suhu yang dinormalisasi dalam Celcius. Nilai diperoleh melalui (t-t_min)/(t_max-t_min), t_min = -8, t_max = +39 (hanya dalam skala per jam)</li>
+                            <li>atemp: Suhu perasaan yang dinormalisasi dalam Celcius. Nilai-nilai ini diperoleh melalui (t-t_min)/(t_max-t_min), t_min=-16, t_max=+50 (hanya dalam skala per jam)</li>
+                            <li>hum: Kelembapan yang dinormalisasi. Nilai dibagi menjadi 100 (maksimum)</li>
+                            <li>windspeed: Kecepatan angin yang dinormalisasi. Nilai dibagi menjadi 67 (maks)</li>
+                            <li>casual: jumlah pengguna biasa</li>
+                            <li>registered: jumlah pengguna terdaftar</li>
+                            <li>cnt: jumlah total sepeda sewaan termasuk yang kasual dan terdaftar</li>
+                        </ul>
+                        <a href="https://archive.ics.uci.edu/dataset/275/bike+sharing+dataset" target="_blank" style="color: black; text-decoration: none; background-color: white; font-weight: bolder;">Klik disini untuk info lebih lanjut.</a>
+                        <h4>Membuat Visual (Dashboard)</h4>
+                        <p>Untuk dashboard, saya menggunakan modul streamlit yang terdapat didalam Python untuk membuat beberapa bahan/chart.</p>
+                        <p>Untuk menampilkan tingkat penyewaan sepeda pada setiap musim, saya menggunakan column char.</p>
+                        <p>Sedangkan untuk Konstribusi penyewaan sepeda per jam, saya menggunakan line chart.</p>
+                        <p>Dapat dilihat pada dashboard bahwa musim gugur memiliki penyewaan sepeda terbanyak dengan rata-rata sewa 5644 di ikuti oleh musim panas dengan rata-rata 4992 penyewa, lalu musim dingin dengan rata-rata 4728 penyewa dan terakhir musim semi dengan rata-rata 2604.</p>
+                    </div>
+                    <div id="PythonCode" class="bike-tabcontent">
+                        <h3>Python Code</h3>
+                        <h4>Bike Sharing Project</h4>
+                        <!--
+                        <script src="https://gist.github.com/lonewolf4eternity/9660f13d32a7329f88270633fa4d3d35.js"></script>-->
+                        <div class="dax-function">
+                            <div class="dax-function-content">
+                                <p>Import Library</p>
+                                <pre><code class="language-python">
+import streamlit as st
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Load data</p>
+                                <pre><code class="language-python">
+# Load data
+day_df = pd.read_csv('day.csv')
+hour_df = pd.read_csv('hour.csv')
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Converting datetime</p>
+                                <pre><code class="language-python">
+# Convert datetime columns to datetime type
+datetime_columns = ["dteday"]
+
+for column in datetime_columns:
+    day_df[column] = pd.to_datetime(day_df[column])
+    hour_df[column] = pd.to_datetime(hour_df[column])
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Mapping season</p>
+                                <pre><code class="language-python">
+# Mapping season, yr (year), and mnth (month) columns
+season_mapping = {1: "spring", 2: "summer", 3: "fall", 4: "winter"}
+yr_mapping = {0: 2011, 1: 2012}
+mnth_mapping = {
+    1: 'January', 2: 'February', 3: 'March', 4: 'April', 5: 'May', 6: 'June',
+    7: 'July', 8: 'August', 9: 'September', 10: 'October', 11: 'November', 12: 'December'
+}
+
+day_df['season'] = day_df['season'].replace(season_mapping)
+day_df['yr'] = day_df['yr'].replace(yr_mapping)
+day_df['mnth'] = day_df['mnth'].replace(mnth_mapping)
+
+hour_df['season'] = hour_df['season'].replace(season_mapping)
+hour_df['yr'] = hour_df['yr'].replace(yr_mapping)
+hour_df['mnth'] = hour_df['mnth'].replace(mnth_mapping)
+
+clean_day_df = day_df
+clean_hour_df = hour_df
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>rents by season</p>
+                                <pre><code class="language-python">
+# Calculate rents by season
+rents_by_season = clean_day_df.groupby('season')[['casual', 'registered', 'cnt']].mean().reset_index()
+rents_by_season = rents_by_season.rename(columns={'cnt': 'total_average'}).astype({
+    'casual': int,
+    'registered': int,
+    'total_average': int
+}).sort_values(by='total_average', ascending=False)
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>contribution by hour</p>
+                                <pre><code class="language-python">
+# Calculate contribution by hour
+contribution_by_hour = clean_hour_df.groupby('hr').agg(
+    avg_casual=('casual', 'mean'),
+    avg_register=('registered', 'mean'),
+    total_average=('cnt', 'mean')
+).reset_index().astype({
+    'avg_casual': int,
+    'avg_register': int,
+    'total_average': int
+})
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Streamlit Apps</p>
+                                <pre><code class="language-python">
+# Streamlit App
+st.title("Dashboard Sewa Sepeda")
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display rents by season chart</p>
+                                <pre><code class="language-python">
+# Display rents by season chart with different colors and values
+st.subheader("Sewa per Musim")
+fig_season = plt.figure()
+# palette = sns.color_palette("pastel")
+bar_plot = sns.barplot(x='season', y='total_average', data=rents_by_season, palette='pastel', hue = 'season')
+for index, value in enumerate(rents_by_season['total_average']):
+    bar_plot.text(index, value, str(value), ha='center', va='bottom')
+st.pyplot(fig_season)
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display rents by season table</p>
+                                <pre><code class="language-python">
+# Display rents by season table
+st.subheader("Tabel Sewa per Musim")
+st.table(rents_by_season.set_index('season'))
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display contribution by hour chart</p>
+                                <pre><code class="language-python">
+# Display contribution by hour chart with all values and increased size
+st.subheader("Kontribusi per Jam")
+fig_hour = plt.figure(figsize=(12, 6))  # Set the figsize parameter to adjust the size
+sns.lineplot(x='hr', y='avg_casual', data=contribution_by_hour, label='Casual', marker='o')
+sns.lineplot(x='hr', y='avg_register', data=contribution_by_hour, label='Registered', marker='o')
+sns.lineplot(x='hr', y='total_average', data=contribution_by_hour, label='Total Average', marker='o')
+plt.xticks(contribution_by_hour['hr'])
+plt.legend()
+st.pyplot(fig_hour)
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display contribution by hour table</p>
+                                <pre><code class="language-python">
+# Display contribution by hour table
+st.subheader("Tabel Kontribusi per Jam")
+st.table(contribution_by_hour.set_index('hr'))
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display summary for rents_by_day</p>
+                                <pre><code class="language-python">
+# Display summary for rents_by_day
+st.subheader("Analisa Sewa per Musim")
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Summary 01</p>
+                                <pre><code class="language-python">
+summary_text = """
+**Pertanyaan 1**
+
+Bagaimana permintaan sewa sepeda bervariasi di berbagai musim?
+Berdasarkan data yang diperoleh, kita dapat mengetahui bahwa :
+"""
+
+view_more = st.checkbox("View More")
+
+if view_more:
+    full_summary_text = """
+    **Pertanyaan 1**
+
+    Bagaimana permintaan sewa sepeda bervariasi di berbagai musim?
+    Berdasarkan data yang diperoleh, kita dapat mengetahui bahwa :
+
+    1. Musim Gugur (Fall) adalah musim yang paling banyak orang menyewa sepeda dibanding musim lainnya. Hal ini
+        menunjukkan minat orang-orang lebih tinggi untuk melakukan sewa sepeda pada musim gugur.
+    2. Musim Semi (Spring) merupakan musim dengan rata-rata sewa sepeda terendah. Hal ini mungkin menunjukkan
+        bahwa cuaca atau faktor lain mempengaruhi minat orang-orang untuk menyewa sepeda.
+    3. Musim Panas memiliki rata-rata sewa sepeda yang lebih tinggi dibanding musim dingin. Kemungkinan ini 
+        terjadi karena cuaca yang lebih hangat dan kondisi yang lebih menguntungkan untuk bersepeda selama 
+        musim panas.
+    4. Terdapat perbedaan yang signifikan antara rata-rata sewa pada musim gugur dengan musim lainnya karena 
+        beberapa faktor seperti festival, acara khusus, dan kondisi lainnya.
+    """
+    st.write(full_summary_text)
+else:
+    st.write(summary_text)
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Display summary for contribution_by_hour</p>
+                                <pre><code class="language-python">
+# Display summary for contribution_by_hour
+st.subheader("Analisa Kontribusi per Jam")
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Summary 02</p>
+                                <pre><code class="language-python">
+summary_text_2 = """
+**Pertanyaan 2**
+
+Bagaimana kontribusi pengguna casual dan terdaftar terhadap jumlah sewa sepeda per jam?
+Berdasarkan data yang diperoleh, dapat kita ketahui :
+"""
+
+view_more_2 = st.checkbox("View More...")
+
+if view_more_2:
+    full_summary_text_2 = """
+    **Pertanyaan 2**
+    
+    Bagaimana kontribusi pengguna casual dan terdaftar terhadap jumlah sewa sepeda per jam?
+    Berdasarkan data yang diperoleh, dapat kita ketahui :
+
+    1. Jam 17 (5:00 PM) memiliki total rata-rata sewa sepeda per jam tertinggi, mencapai 461.
+    2. Jam 8 (8:00 AM) dan jam 18 (6:00 PM) juga merupakan jam-jam dengan kontribusi tinggi, dengan total rata-rata 
+        masing-masing 359 dan 425.
+    3. Pengguna terdaftar memberikan kontribusi yang lebih besar dibandingkan pengguna casual pada setiap jam.
+    4. Terdapat perbedaan yang signifikan antara rata-rata kontribusi pengguna casual dan terdaftar pada beberapa 
+        jam tertentu. Sebagai contoh, pada jam 17 (5:00 PM), kontribusi pengguna terdaftar mencapai 387, sementara 
+        pengguna casual hanya 74.
+    5. Kontribusi pengguna casual dan terdaftar cenderung meningkat selama jam sibuk, terutama pada jam 8 (8:00 AM) 
+        dan jam 17 (5:00 PM).
+    """
+    st.write(full_summary_text_2)
+else:
+    st.write(summary_text_2)
+                                </code></pre>
+                            </div>
+                            <div class="dax-function-content">
+                                <p>Footer for dashboard</p>
+                                <pre><code class="language-python">
+st.caption ('Revardy D. Chester (c) 2023 | Dicoding Indonesia | Proyek Analisis Data : Bike Sharing Dataset')
+                                </code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="skill-footer">
+                    <p><i class="fa-regular fa-copyright"></i>&nbsp;&nbsp;&nbsp;Copyright 2024</p>
+                    <div class="skill-footer-socmed">
+                        <a href="https://web.facebook.com/revardy.d.caesar/" target="_blank" class="tooltip" data-title="Facebook" data-description="Akun sosial media Facebook."><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.linkedin.com/in/amal-rahman-duya-897a59136/" target="_blank" class="tooltip" data-title="Linkedin" data-description="Akun sosial media Linkedin - situs pencari kerja."><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/lonewolf4eternity/" target="_blank" class="tooltip" data-title="Instagram" data-description="Akun sosial media Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://github.com/revchester" target="_blank" class="tooltip" data-title="Github" data-description="Akun penyimpanan code."><i class="fa-brands fa-github"></i></a>
+                        <a href="mailto:amalrahmanduya@gmail.com" target="_blank" class="tooltip" data-title="G-mail" data-description="Mari berikirim e-mail dengan saya."><i class="fa-brands fa-google"></i></a>
+                        <a href="https://wa.me/6282173761982" target="_blank" class="tooltip" data-title="WhatsApp" data-description="Hallo..  ingin berbincang dengan saya? Silahkan chat ke nomor ini. Terima Kasih."><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                    <p><i class="fa-solid fa-code"></i>&nbsp;&nbsp;&nbsp;Revardy D. Chester. All Rights Reserved.</p>
+                </div>
+                <div class="powered-by">
+                    <p><i class="fa-solid fa-life-ring"></i>&nbsp;&nbsp;&nbsp;Powered by :</p>
+                    <img src="../../../image/powered-by/chatgpt.png" alt="ChatGPT">
+                    <img src="../../../image/powered-by/github.png" alt="github">
+                    <img src="../../../image/powered-by/vsc.jpg" alt="VSC">
+                    <img src="../../../image/powered-by/gdrive.png" alt="gdrive">
+                    <img src="../../../image/powered-by/power-bi_logo.png" alt="PowerBI">
+                    <img src="../../../image/powered-by/streamlit_hero.jpg" alt="StreamLit">
+                </div>
+            </footer>
+        </main>
+    </div>
+    <script src="../../../js/prism.js"></script>
+    <script src="../../../js/bike-sharing.js"></script>
+    <script src="../../../js/script.js" type="text/javascript"></script>
+</body>
+</html>
