@@ -1,0 +1,1702 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #212529;
+}
+
+h1 {
+    font-size: 40pt;
+    color: yellow;
+}
+
+h2 {
+    font-size: 35pt;
+    color: cadetblue;
+}
+
+h3 {
+    font-size: 30pt;
+    color: darkkhaki;
+}
+
+h4 {
+    font-size: 25pt;
+    color: yellowgreen;
+}
+
+h5 {
+    font-size: 20pt;
+    color: crimson;
+}
+
+i {
+    font-size: 20pt;
+    color: goldenrod;
+}
+
+i:hover {
+    color: yellow;
+}
+
+p, a, ul li, ol li {
+    font-size: 13pt;
+}
+
+p {
+    color: lightblue;
+}
+
+a {
+    color: chocolate;
+}
+
+ul li, ol li {
+    padding: 10px;
+    color: burlywood;
+}
+
+strong {
+    font-weight: bolder;
+    color: darkolivegreen;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #070807;
+    color: rgb(255, 196, 0);
+    height: 80px;
+    padding: 10px;
+    width: 100%;
+}
+
+.header-left {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: auto;
+}
+
+.logo {
+    height: 60px;
+    margin-right: 5px;
+}
+
+.title-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-section h1 {
+    margin: 0;
+    color: darkgoldenrod;
+}
+
+.title-section span {
+    color: yellow;
+}
+
+.title-section h2 {
+    margin: 0;
+    color: gold;
+}
+
+.title-section h3 {
+    margin: 0;
+    color: goldenrod;
+}
+
+.header-center {
+    width: 21%;
+    text-align: justify;
+}
+
+.date-section {
+    margin: 0 15px;
+}
+
+#date {
+    font-weight: bolder;
+}
+
+#time {
+    font-weight: bolder;
+}
+
+.header-right {
+    width: 26%;
+}
+
+.header-right i {
+    padding: 10px;
+}
+
+.header-right i:hover {
+    color: yellow;
+    background-color: rgb(172, 148, 16);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+/*
+.header-right nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header-right nav ul li {
+    margin-left: 20px;
+}
+
+.header-right nav ul li a {
+    text-decoration: none;
+    color: gold;
+    font-size: 15pt;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+*/
+
+.header-right img {
+    width: 125px;
+    height: auto;
+}
+
+.header-right nav ul li a:hover {
+    background-color: rgb(146, 126, 16);
+    border-radius: 10px;
+    color: rgb(243, 231, 231);
+    font-weight: bolder;
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - 100px);
+}
+
+.sidebar-left {
+    width: 5%;
+    padding: 1rem;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 18pt;
+}
+
+.sidebar-left img {
+    height: 15px;
+    width: 50px;
+}
+
+/*  tooltip container left side corner  */
+/* Tooltip container */
+.tooltip-container {
+    position: absolute;
+    bottom: 10px; /* Tooltip berada di dekat sudut kiri bawah */
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.8); /* Warna background hitam dengan transparansi */
+    padding: 10px;
+    border: 2px solid gold;
+    border-radius: 8px;
+    width: 300px; /* Lebar maksimal tooltip */
+    display: none; /* Mulanya disembunyikan */
+    z-index: 1000; /* Agar berada di atas elemen lain */
+}
+
+/* Styling untuk judul tooltip */
+.tooltip-container .tooltip-title {/*
+    font-size: 1.2rem;*/
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: yellow;
+}
+
+/* Styling untuk deskripsi tooltip */
+.tooltip-container .tooltip-description {/*
+    font-size: 0.9rem;*/
+    line-height: 1.4;
+    color: goldenrod;
+}
+
+/* Tampilan tooltip ketika muncul */
+.tooltip-container.show {
+    display: block;
+}
+/*  end of tooltip container    */
+
+main {
+    flex-grow: 1;
+    width: 60%;
+    padding: 10px;
+    overflow-y: auto;
+    line-height: 1.25;
+    padding-bottom: 100px;
+    min-height: auto;
+}
+
+.main-profile {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-gap: 25px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.profile-title {
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    padding: 10px;
+}
+
+.profile-aboutme {
+    text-align: justify;
+    padding: 10px;
+    grid-column: 1 / -1;
+    grid-row: 2;
+}
+
+.profile-aboutme h2 {
+    padding: 10px;
+}
+
+.profile-aboutme p {
+    padding: 10px;
+}
+
+.profile-contact {
+    padding: 10px;
+    grid-column: 1 / 3;
+    grid-row: 3 ;
+}
+
+.profile-contact h2 {
+    padding: 10px;
+}
+
+.profile-contact p {
+    padding: 10px;
+}
+
+
+.profile-contact a {
+    text-decoration: none;
+}
+
+.profile-contact a:hover {
+    text-decoration: underline;
+}
+
+.profile-social-media {
+    padding: 10px;
+    grid-column: 2/3;
+    grid-row: 3;
+}
+
+.profile-social-media h2 {
+    padding: 10px;
+}
+
+.profile-social-media i {
+    padding: 10px;
+}
+
+.sidebar-right {
+    width: 35%;
+    padding: 10px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.profile-pic {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid goldenrod;
+}
+
+.info-box {
+    border: 2px solid goldenrod;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.info-box ul {
+    margin: 10px;
+}
+
+.info-box ol {
+    margin: 10px;
+    padding-left: 15px;
+}
+
+.info-box ul li, ol li {
+    text-align: left;
+}
+
+aside nav ul {
+    list-style: none;
+}
+
+aside nav ul li {
+    margin-bottom: 10px;
+}
+
+aside nav ul li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    border-radius: 3px;/*
+    transition: background 0.3s;*/
+}
+
+aside nav ul li a title {
+    width: 100px;
+}
+
+aside nav ul li a i:hover {
+    transition: background 0.3s;
+    transform: scale(1.5);
+}
+
+.skill-bar-container {
+    width: 100%;
+    background-color: rgb(106, 104, 95);
+    border-radius: 10px;
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+.skill-bar {
+    height: 5px;
+    background-color: gold;
+    border-radius: 10px;
+}
+
+.skill-value {
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: bold;/*
+    font-size: 13pt;/*
+    line-height: 20px;*/
+    float: inline-end;
+}
+
+.stars {/*
+    font-size: 15pt;*/
+    color: gold;
+    margin-left: 10px;
+    float: right;
+}
+
+.rs-footer {
+    width: 100%;
+    height: max-content;
+    margin: 5px;
+    padding: 10px;
+}
+
+.rs-footer p {
+    font-weight: bold;
+    text-align: left;
+}
+
+.rs-footer-socmed {
+    text-align: left;
+}
+
+.rs-footer-socmed i {
+    padding: 10px;
+}
+
+.main-skill {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.skill-title {
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    padding: 10px;
+}
+
+.skill-box {
+    width: 100%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.skill-icon {
+    width: 265px;
+    height: 300px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.skill-icon img {
+    width: 150px;
+    background-color: rgba(255, 255, 0, 0.1);
+    margin-bottom: 10px;
+    border: 3px solid yellow;
+    border-radius: 50%;
+    box-shadow: 0px 5px 15px rgb(179, 203, 237), 0px 5px 10px rgba(241, 214, 139, 0.9) inset;
+}
+
+.skill-icon img:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4), 0px 5px 10px rgba(255, 255, 255, 0.2) inset;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.skill-icon p {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.skill-icon:hover {
+    transform: scale(1.05);
+    background-color: rgba(255, 255, 0, 0.1);
+    border: 2px solid goldenrod;
+}
+
+.skil-stars {
+    text-align: justify;
+    color: violet;
+}
+
+
+footer{
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 97%;
+    margin-top: 100px;
+}
+
+.skill-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 0;
+    padding: 10px;
+}
+
+.skill-footer p {
+    margin: 0;
+}
+
+.skill-footer-socmed a {
+    margin: 0 10px;/*
+    font-size: 24pt;*/
+    transition: color 0.3s;
+}
+
+.main-experiences {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.experiences-title {
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    padding: 10px;
+}
+
+/*  experience grid mode start */
+.experiences-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    padding: 10px;
+}
+
+.experiences-item {
+    padding: 10px;
+    border-radius: 10px;/*
+    border: 2px solid goldenrod;*/
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    height: fit-content;
+    width: fit-content;
+}
+
+#experiences-item-jda {
+    grid-column: 1 / 2;
+    grid-row: 1 / 1;
+}
+
+#experiences-item-legal {
+    grid-column: 2 / 2;
+    grid-row: 1 / 3;
+}
+
+#experiences-item-ndt {
+    grid-column: 1 / 2;
+    grid-row: 2 / span 3;
+}
+
+#experiences-item-ico {
+    grid-column: 2 / 2;
+    grid-row: 3 / 3;
+}
+
+.experiences-item h2 {
+    margin-bottom: 10px;
+}
+
+.experiences-item ol li {
+    font-weight: bolder;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+
+.experiences-item ul li {
+    font-weight: lighter;
+    margin-left: 20px;
+    line-height: 1.5;
+}
+
+.experiences-item-btn {
+    position: relative;
+    bottom: 10px;
+    display: inline-block;
+    padding: 10px;
+    background-color: goldenrod;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.experiences-item-btn:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/*  experience grid mode end */
+
+.main-education {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.education-title {
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    padding: 10px;
+}
+
+.education-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.education-item p {
+    text-align: left;
+    margin-left: 15px;
+}
+
+.edu-icon {
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
+    border: 3px solid yellow;
+    border-radius: 50%;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.carousel-images {
+    display: flex;
+    justify-content: space-between;
+    animation: scroll 10s linear infinite;
+}
+
+.carousel-images img {
+    width: auto;
+    height: 200px;
+    margin: 0 20px;
+    border-radius: 50%;
+}
+
+.carousel-images::before {
+    content: '';
+    display: block;
+    width: 100%;
+}
+
+@keyframes scroll {
+    0% {transform: translate(100%);}
+    100% {transform: translateX(-100%);}
+}
+
+.education-details {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.education-column {
+    width: 50%;
+}
+
+.education-column h3 {
+    margin-bottom: 10px;
+}
+
+.main-certification {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.certification-title {
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    padding: 10px;
+}
+
+.certification-box {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.certification-item {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.certification-item img {
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certification-item img:hover {
+    transform: scale(1.05);
+}
+
+.certification-info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: goldenrod;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.certification-item:hover .certification-info {
+    display: block;
+    opacity: 1;
+    border: 2px solid gold;
+}
+
+.certification-info h5 {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.certification-info a {
+    text-decoration: none;
+}
+
+.certification-info p {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.certification-btn, .view-image-btn {
+    display: inline-block;
+    padding: 10px;
+    background-color: goldenrod;
+    color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.view-image-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 100px;
+}
+
+.certification-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 120px;
+    width: 100px;
+}
+
+.certification-btn:hover, .view-image-btn:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-content {/*
+    display: block;
+    margin: auto;*/
+    max-width: 80%;
+    max-height: 80%;/*
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);*/
+    cursor: grab;
+    transition: transform 0.2s ease;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;/*
+    font-size: 40px;*/
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Zoom functionality for image */
+.modal-content.zoomed {
+    cursor: zoom-out;/*
+    transform: scale(11);  /* This can be adjusted based on how much you want to zoom */
+}
+
+.modal-content.normal {
+    cursor: zoom-in;
+    transform: scale(1);
+}
+
+.main-project {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.project-title {
+    width: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1 / 1;
+    padding: 10px;
+}
+
+.project-box {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    justify-items: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.project-maintenance {
+    margin-top: 50px;
+    width: auto; /* Bisa diatur sesuai kebutuhan */
+    height: calc(100vh - 100px); /* 100vh adalah tinggi layar, dikurangi 100px untuk jarak atas dan bawah */
+    background-color: lightgrey;
+}
+
+.project-item {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(161, 161, 4, 0.1), rgba(161, 161, 4, 0.1));/*
+    background-color: rgba(161, 161, 4, 0.1);*/
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    height: 500px;
+    border: 2px solid gold;
+    transition: background 0.5s ease, transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to bottom, rgb(35, 25, 1), rgb(35, 25, 1));
+    border: 6px solid goldenrod;
+}
+
+.project-item h3 {
+    margin-bottom: 20px;
+    background-color: rgb(44, 16, 16);
+    height: 100px;
+    text-align: center;
+    display: flex; /* Mengatur teks agar selalu berada di tengah vertikal */
+    justify-content: center; /* Tengah horizontal */
+    align-items: center; /* Tengah vertikal */
+    font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran font dinamis */
+}
+
+.project-item p {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.project-link {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    background-color: gold;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-colow 0.3s;
+    margin-left: 20px;
+    align-items: flex-end;
+}
+
+.project-link:hover {
+    background-color: yellow;
+}
+
+/* Styling untuk ul dan li */
+.project-item ul {
+    list-style-type: disc; /* Gunakan bulatan untuk unordered list */
+    padding-left: 30px; /* Tambah jarak untuk indentasi */
+    margin-top: 15px;
+}
+
+.project-item ul li {
+    margin-bottom: 5px; /* Jarak antar item */
+    text-align: left;
+}
+
+/* Untuk membuat lebih rapi, list-style bisa diubah *//*
+.project-item ul li::marker {
+    color: gold; /* Warna bullet points *//*
+    font-size: large; /* Ukuran bullet *//*
+}*/
+
+.ndt-project-box {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0;
+    justify-items: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
+}
+
+.ndt-project-item {
+    position: relative;
+    background-color: rgba(161, 161, 4, 0.1);
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: auto;
+    height: auto;
+    border: 2px solid gold;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.ndt-project-item img {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    margin: 0;
+    border: 2px solid goldenrod;
+    object-fit: cover;
+}
+
+.ndt-project-item a {
+    grid-column: span 4;
+    margin-top: 20px;
+    background-color: rgb(44, 16, 16);
+    padding: 10px;
+    font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran font dinamis */
+    text-align: center;
+    text-decoration: none;
+}
+
+.ndt-project-item a:hover {
+    text-decoration: underline;
+    color: goldenrod;
+    background-color: rgb(69, 66, 4);
+}
+
+.ndt-project-item p {
+    margin-bottom: 15px;
+}
+
+/* Styling untuk ul dan li */
+.ndt-project-item ul {
+    list-style-type: disc; /* Gunakan bulatan untuk unordered list */
+    padding-left: 30px; /* Tambah jarak untuk indentasi */
+    margin-top: 10px;
+}
+
+.ndt-project-item ol {
+    grid-column: span 4;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.ndt-project-item ol li {
+    padding-left: 20px;
+}
+
+.ndt-project-item ul li {
+    margin-bottom: 5px; /* Jarak antar item */
+    padding-left: 20px;
+}
+
+/* Untuk membuat lebih rapi, list-style bisa diubah */
+.ndt-project-item ul li::marker {
+    color: gold; /* Warna bullet points *//*
+    font-size: large; /* Ukuran bullet */
+}
+
+.ndt-project-item-gallery {
+    position: relative;
+    background-color: rgba(161, 161, 4, 0.1);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: auto;
+    height: auto;
+    border: 2px solid gold;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1px;
+}
+
+.ndt-project-item-gallery img {
+    width: 75px;
+    height: 75px;
+    padding: 0;
+    margin: 0;
+    border: 2px solid goldenrod;
+    object-fit: cover;
+}
+
+.ndt-project-item-gallery a {
+    grid-column: span 4;
+    color: rgb(35, 25, 1);
+    margin-top: 20px;
+    background-color: rgb(44, 16, 16);
+    padding: 10px;
+    font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran font dinamis */
+    text-align: center;
+    text-decoration: none;
+}
+
+.ndt-project-item-gallery a:hover {
+    text-decoration: underline;
+    color: goldenrod;
+    background-color: rgb(69, 66, 4);
+}
+
+.ndt-project-item-gallery p {
+    margin-bottom: 15px;
+}
+
+.ndt-project-item-preview {
+    position: relative;
+    background-color: rgba(161, 161, 4, 0.1);/*
+    color: gold;*/
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+.ndt-project-item-preview img {
+    width: 200%; /* Sesuaikan ukuran gambar preview */
+    height: auto;
+    border: 2px solid goldenrod;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.tab-container {
+    width: 100%;
+    margin: 20px auto;
+    margin-top: 50px;
+    background-color: #333333; /* Warna latar belakang container */
+    border-radius: 20px; /* Membuat sudut melengkung */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+    overflow: hidden;
+}
+
+.tab-buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #555555;
+    height: 150px;
+    padding: 10px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.tab-button {
+    padding: 10px;
+    background-color: transparent;
+    width: 120px;
+    height: 120px;
+    border: 5px goldenrod;
+    border-style: outset;
+    cursor: pointer;
+    outline: auto;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Menambahkan bayangan pada tombol *//*
+    font-size: calc(1vw + 0.5em);*/
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.tab-button.active, .tab-button:hover {
+    transform: translateY(-3px); /* Efek hover tombol naik sedikit */
+}
+
+.tab-button-pt:hover {
+    background-color: orange;
+}
+
+.tab-button-cv:hover {
+    background-color: darkblue;
+}
+
+.tab-button-yayasan:hover {
+    background-color: greenyellow;
+}
+
+.tab-button-perkumpulan:hover {
+    background-color: deeppink;
+}
+
+.tab-content {
+    display: none;
+    padding: 10px;
+    background-color: #2e2e2e;
+    border: 2px solid #ccc;
+    border-top: none;
+    border-radius: 0 0 20px 20px; /* Membuat sudut bawah melengkung */
+    width: 85%;
+    margin: 0 auto;
+}
+
+.tab-content h3 {/*
+    font-size: xx-large;*/
+    font-weight: bolder;
+    color: yellow;
+    font-style: italic;
+    text-decoration: overline underline;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: #333; /* Warna latar belakang tabel */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan pada tabel */
+    table-layout: auto;
+}
+
+table, th, td {
+    border: 2px solid rgb(214, 161, 27);
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    color: goldenrod;/*
+    font-size: 16px; /* Ukuran font yang sedikit lebih besar */
+}
+
+/* Memberikan lebar minimum untuk beberapa kolom */
+th:nth-child(1),
+td:nth-child(1) {
+    min-width: 50px; /* Kolom pertama (misalnya, No.) */
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+    min-width: 150px; /* Kolom kedua (misalnya, Nama File) */
+}
+
+th:nth-child(3),
+td:nth-child(3) {
+    min-width: 120px; /* Kolom ketiga (misalnya, Action) */
+}
+
+th {
+    background-color: goldenrod;
+    color: #222;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Zebra striping untuk tabel */
+tbody tr:nth-child(odd) {
+    background-color: #370808; /* Warna latar untuk baris ganjil */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #2a1313; /* Warna latar untuk baris genap */
+}
+
+/* Menambahkan efek hover pada baris tabel */
+tbody tr:hover {
+    background-color: #373535;
+    transition: background-color 0.3s ease;
+}
+
+/*  pencarian isi tabel
+/* Kotak pencarian */
+.search-container {
+    position: relative;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#searchInput {
+    padding: 10px 40px 10px 40px; /* Tambah padding kiri untuk ikon kaca pembesar */
+    width: 50%;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    outline: none;/*
+    font-size: 16px;*/
+    transition: border-color 0.3s;
+    background-color: #2c2603;
+    color: #FFD700;
+}
+
+#searchInput:focus {
+    border-color: goldenrod;
+}
+
+/* Gaya ikon pencarian (kiri) */
+.search-icon {
+    position: absolute;
+    left: 26%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: goldenrod;/*
+    font-size: 18px;*/
+    pointer-events: none; /* Agar ikon tidak mengganggu input pencarian */
+}
+
+/* Gaya ikon xmark (kanan) */
+.clear-icon {
+    position: absolute;
+    right: 27%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: goldenrod;/*
+    font-size: 18px;*/
+    cursor: pointer; /* Menambahkan pointer untuk ikon clear */
+    display: none; /* Sembunyikan secara default, akan ditampilkan jika ada teks */
+}
+
+/*  jda css */
+.project-box-jda {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+.project-item-jda {
+    position: relative;
+    background: linear-gradient(to bottom, rgba(161, 161, 4, 0.1), rgba(161, 161, 4, 0.1));
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    width: 350px;
+    height: 560px;
+    overflow-y: auto;
+    border: 2px solid gold;
+    transition: background 0.5s ease, transform 0.3s ease;
+}
+
+.project-item-jda:hover {
+    transform: scale(1.05);
+    background: linear-gradient(to bottom, rgb(35, 25, 1), rgb(35, 25, 1));
+    border: 6px solid goldenrod;
+}
+
+.project-item-jda h3 {
+    margin-bottom: 20px;
+    background-color: rgb(44, 16, 16);
+    height: 100px;
+    text-align: center;
+    display: flex; /* Mengatur teks agar selalu berada di tengah vertikal */
+    justify-content: center; /* Tengah horizontal */
+    align-items: center; /* Tengah vertikal */
+    font-size: clamp(1rem, 2vw, 2.5rem); /* Ukuran font dinamis */
+}
+
+
+.project-item-jda p {
+    text-align: left;
+    margin-bottom: 15px;
+    padding: 0 10px;
+}
+
+.project-link-jda {
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    background-color: gold;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-colow 0.3s;
+    margin-left: 20px;
+    align-items: flex-end;
+}
+
+.project-link-jda:hover {
+    background-color: yellow;
+}
+
+/* Styling untuk ul dan li */
+.project-item-jda ul {
+    list-style-type: disc; /* Gunakan bulatan untuk unordered list */
+    padding-left: 30px; /* Tambah jarak untuk indentasi */
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.project-item-jda ul li {
+    text-align: left;
+    margin-bottom: 5px; /* Jarak antar item */
+    padding-bottom: 5px;
+}
+
+/* Untuk membuat lebih rapi, list-style bisa diubah */
+.project-item-jda ul li::marker {
+    color: gold; /* Warna bullet points *//*
+    font-size: large; /* Ukuran bullet */
+}
+
+/*  maven market project start  */
+/* Styling untuk maven tab */
+.maven-tabs {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 20px;
+    background-image: url(../image/project/jda/maven-market/maven.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10px;
+    width: 100%;
+    height: 100px;
+}
+
+.maven-tablink {
+    background-color: transparent;
+    color: yellowgreen;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+    margin-right: 5px;
+    width: 200px;
+    height: 50px;
+    font-weight: bolder;
+    border: 2px solid yellowgreen;
+    border-radius: 20px;
+}
+
+.maven-tablink:hover {
+    background-color: #063e24;
+}
+
+.maven-tabcontent {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.maven-tabcontent h3 {
+    margin-top: 0;
+}
+
+.maven-tabcontent h4 {
+    margin-top: 15px;
+}
+
+.maven-tabcontent p{
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.maven-tabcontent ul li {
+    margin-left: 20px;
+    padding-left: 20px;
+}
+
+.maven-tabcontent ol li {
+    color: goldenrod;
+}
+
+.maven-tabcontent a {
+    color: rgb(238, 211, 142);
+    text-decoration: none;
+}
+
+.maven-active-tab {
+    background-color: #312d02;
+    color: gold;
+}
+
+/* Kolom No. dan Nama File tetap rata kiri */
+.styled-table td:nth-child(1),
+.styled-table td:nth-child(2) {
+    text-align: left;
+}
+
+/* Kolom Action di tengah */
+.styled-table td:nth-child(3),
+.styled-table th:nth-child(3) {
+    text-align: center;
+}
+
+.view-file-btn, .download-file-btn {
+    display: inline-block;
+    width: 125px;
+    margin: 0 5px; /* Ruang antara tombol */
+    padding: 8px 12px;
+    color: black;
+    background-color: #b37700; /* Warna tombol*/
+    text-decoration: none;
+    border-radius: 5px; /* Sudut tombol melengkung */
+    text-align: center;
+}
+
+.view-file-btn:hover, .download-file-btn:hover {
+    background-color: rgb(255, 179, 0); /* Warna tombol saat hover*/
+    color: black;
+    font-weight: bolder;
+}
+
+.dax-function {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.dax-function > div {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: transparent;
+    padding: 5px;
+    display: inline-block;
+    width: auto;
+    min-width: 50px;
+    overflow-x: auto;
+}
+
+.dax-function p {
+    padding: 10px;
+    margin: 0;
+    background-color: #555555;
+    font-weight: bolder;
+}
+
+.dax-function-content {
+    width: auto;
+    border-radius: 10px;
+}
+
+/* bike sharing dataset format */
+/* Container styles */
+.bike-tab-container {
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+/* Style the tab buttons */
+.bike-tabs {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    background-image: url(../image/project/jda/bike-sharing/bike.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: #351b03;
+}
+
+.bike-tabs button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: 0.3s;
+    height: 75px;
+    width: 150px;
+    border-radius: 20px;
+}
+
+.bike-tabs button:hover {
+    background-color: #f18e0e;
+    color: black;
+    font-weight: bolder;
+}
+
+.bike-tabs button.active {
+    background-color: #c7f10e;
+    color: black;
+    font-weight: bolder;
+}
+
+/* Style the tab content */
+.bike-tabcontent {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.bike-tabcontent h3 {
+    margin-bottom: 10px;
+}
+
+.bike-tabcontent h4 {
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.bike-tabcontent p {
+    text-align: justify;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.bike-tabcontent ul li {
+    margin-left: 25px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.bike-tabcontent table script {
+    display: inline;
+}
+
+.source-file-btn {
+    display: inline-block;
+    margin: 0 5px; /* Ruang antara tombol */
+    padding: 8px 12px;
+    color: black;
+    background-color: #b37700; /* Warna tombol*/
+    text-decoration: none;
+    border-radius: 5px; /* Sudut tombol melengkung */
+    text-align: center;
+}
+
+.source-file-btn:hover {
+    background-color: rgb(255, 179, 0); /* Warna tombol saat hover*/
+    color: black;
+    font-weight: bolder;
+}
+
+/*  NHTSA format    */
+/* NHTSA Tab Styling */
+.nhtsa-tab-container {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.nhtsa-tab-menu {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+    border-radius: 5px 5px 0 0;
+}
+
+.nhtsa-tab-item {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    height: fit-content;
+}
+
+.nhtsa-tab-item-img {
+    width: 300px;
+    height: 100px;
+    background-image: url(../image/project/jda/nhtsa/nhtsa.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 300px 100px;
+}
+
+.nhtsa-tab-item:hover {
+    background-color: #555;
+    font-weight: bold;
+}
+
+.nhtsa-tab-item.active {
+    background-color: #2b527b;
+    font-weight: bolder;
+}
+
+.nhtsa-tab-content {
+    padding: 10px;
+    background-color: transparent;
+    border:2px solid #ddd;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nhtsa-tab-panel {
+    display: none;
+    background-color: transparent;
+}
+
+.nhtsa-tab-panel h3 {
+    margin-bottom: 5px;
+}
+
+.nhtsa-tab-panel h4 {
+    margin-bottom: 10px;
+}
+
+.nhtsa-tab-panel p {
+    margin-bottom: 15px;
+}
+
+.nhtsa-tab-panel ol {
+    margin-bottom: 20px;
+}
+
+.nhtsa-tab-panel ol li {
+    padding-left: 20px;
+    margin-left: 20px;
+}
+
+.nhtsa-tab-panel h3, h4, p, ol, li {
+    line-height: 1.25;
+    text-align: justify;
+}
+
+.nhtsa-tab-panel.active {
+    display: block;
+}
+
+.powered-by {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-left: 5px;
+    padding-top: 0;
+    background-color: transparent;
+    text-align: left;
+}
+
+.powered-by img {
+    height: 60px;
+    width: 110px;
+    margin: 0;
+    padding: 5px;
+    border: 1px solid yellow;
+}
